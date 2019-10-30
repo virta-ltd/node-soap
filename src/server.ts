@@ -286,6 +286,7 @@ export class Server extends EventEmitter {
     const obj = this.wsdl.xmlToObject(input);
     const body = obj.Body;
     const headers = obj.Header;
+    req['xmlBody'] = input;
     let binding: BindingElement;
     let methodName: string;
     let serviceName: string;
