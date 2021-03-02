@@ -430,7 +430,7 @@ export class Client extends EventEmitter {
         } else {
           return header;
         }
-      }).join(' ');
+      }).join('');
     }
 
     xml = '<?xml version="1.0" encoding="utf-8"?>' +
@@ -450,7 +450,7 @@ export class Client extends EventEmitter {
           ''
         ) +
       '<' + envelopeKey + ':Body' +
-      (this.bodyAttributes ? this.bodyAttributes.join(' ') : '') +
+      (this.bodyAttributes ? this.bodyAttributes.join('') : '') +
       (this.security && this.security.postProcess ? ' Id="_0"' : '') +
       '>' +
       message +
